@@ -1,0 +1,56 @@
+Q1. What is React?
+React is an open-source frontend JavaScript library which is used for building user interfaces especially for single page applications. It is used for handling view layer for web and mobile apps. React was created by Jordan Walke, a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
+
+React is just a UI Library that allows us to write more javascript to have interactivity on our websites.
+
+Q2. What are the major features of React?
+The major features of React are:
+a.It uses VirtualDOM instead of RealDOM considering that RealDOM manipulations are expensive.
+b.Supports server-side rendering.
+c.Follows Unidirectional data flow or data binding.
+d.Uses reusable/composable UI components to develop the view.
+
+Q3. What is JSX?
+JSX stands for JavaScript XML. JSX allows us to write HTML in React. Basically it just provides syntactic sugar for the React.createElement() function. It looks very similar to HTML, but is converted to JavaScript behind the scenes.
+
+a. What is Syntactic sugar?
+syntactic sugar is syntax within a programming language that is designed to make things easier to read or to express.
+
+Q4. What is the difference between Element and Component?
+An Element is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. Elements can contain other Elements in their props. Creating a React element is cheap. Once an element is created, it is never mutated.
+Whereas a component can be declared in several different ways. It can be a class with a render() method or it can be defined as a function. In either case, it takes props as an input, and returns a JSX tree as the output.
+
+Q5. How to create components in React?
+There are two possible ways to create a component.
+Function Components: This is the simplest way to create a component. These are pure JavaScript functions that accept props object as first parameter and return React elements:
+Class Components: We can also use ES6 class to define a component.
+
+Q6. When to use a Class Component over a Function Component?
+If the component needs state or lifecycle methods then use class component otherwise use function component. However, from React 16.8 with the addition of Hooks, you could use state , lifecycle methods and other features that were only available in class component right in your function component.
+
+Q7. What are Pure Components?
+React.PureComponent is exactly the same as React.Component except that it handles the shouldComponentUpdate() method for us. When props or state changes, PureComponent will do a shallow comparison on both props and state.If the value of the previous state or props and the new state or props is the same, the component is not re-rendered. Pure Components restricts the re-rendering ensuring the higher performance of the Component.
+
+Q8. What is State?
+State is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components.
+State is similar to props, but it is private and fully controlled by the component. i.e, It is not accessible to any other component till the owner component decides to pass it.
+
+Q9. What are Props?
+Props is short for properties
+Attributes on Components get converted into an object called Props
+Props make components more reusable
+Props are an object, so we can destructure them.
+They are data passed down from a parent component to a child component.
+
+a. What are props.children?
+props.children represents the content between the tags of a Component.
+props.children can be an array or a single item.
+props.children can contain text and/or React Elements and/or React Components.
+
+b. What is the purpose of props in react?
+1.Pass custom data to the component.
+2.Trigger state changes.
+3.Use via this.props.reactProp inside component's render() method.
+
+Q10. What is the difference b/w state and props?
+Both state and props are plain javascript objects. Both of them hold information that influences the output of render, but they are different in their functionality w.r.t component. Props get passed to components similar to function parameters whereas state is managed within the component similar to variables declared within a function. 
