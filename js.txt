@@ -1,0 +1,47 @@
+What is javascript?
+JavaScript is a client-side and server-side scripting language inserted into HTML pages and is understood by web browsers. JavaScript is also an Object based Programming language.
+
+Q. Why script tag is wriiten at bottom not at starting of body tag or inside head tag like css?
+If script tag is wriiten at starting of body tag or inside head tag then javascript will load before html files and the user don't see anything on the page until the javascript loads and it seems slower website. Therefore to appear the website loads faster we will write script tag at last. 
+
+Q. What are lambda or arrow functions?
+Arrow functions are just short syntax for a function expression and does not have its own this, arguments, super or new.target. These functions are best suited for non method functions. 
+
+Q. What are call, apply and bind methods?
+Call method invokes the function with a given 'this' value and arguments provided one by one seperated by commas.
+Apply method invokes the function with a given 'this' value and allows us to pass in arguments as an array.
+Bind method returns a new function that will have 'this' set to the first parameter passed to bind().
+
+Q. Difference between Call and Apply.
+Call and apply are pretty interchangeable. Both execute the current function immediately. We need to decide whether it’s easier to send in an array or a comma separated list of arguments.
+
+Q. What is hoisting?
+Hositing is a javascript mechanism where variables and functions declarations are moved to top of their scope before code execution. Javascript only hoist declarations not initialisations. 
+
+Q. What are Closures?
+A closure is a combination of function and lexical environment within which that function was declared. It is an inner function that has access to the outer or enclosing function's variables.
+The closure has three scope chains :-
+Own scope where variables defined between its curly brackets
+Outer function’s variables
+Global variables 
+
+What is an expression?
+An expression is any valid JavaScript code that resolves to a value.
+
+for setting date = new Date().getTime().toString()
+
+What are Array Methods?
+These are methods we can call on any array that will perform some kind of action on that array or with that array.
+
+What is the difference between methods and properties?
+Objects are collections of things that have properties that have values.
+
+Methods:
+Methods are pretty much just properties that point to functions.We use them like functions but we call them with the dot notation like it's a property on the object.
+
+Q. Difference between parameters and arguments
+Objects are collection of properties
+Function inside an object is called method for eg:- console.log() means log is a method on console.
+
+Q. What are non-method functions?
+Q. What is new.target?

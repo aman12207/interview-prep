@@ -1,0 +1,38 @@
+Q. Difference between inline and block elements?
+Inline elements occupy the sufficient width required. They don't have top and bottom margin. They don't start in a new line. Eg:- a tag, script tag, b tag, span tag, img tag, label tag
+Block elements occupy the full width irrespective of their sufficiency. They have top and bottom margin. They always start in a new line. Eg:- h1-h6 tag, br tag, hr tag, div tag, p tag, ul tag, ol tag, li tag, table tag
+
+Q. What is inline-block?
+It's a mixture of both the properties inline and block i.e. we can set width and height of element like block elements and element does not add a line-break like inline elements
+
+Q. Difference between grid and flexbox?
+Grids helps us create the outer layout of the webpage. We can build complex as well responsive design with this. This is why it is called ‘layout first’.
+Flexbox mostly helps align content & move blocks.
+Grids are for 2D layouts. It works with both rows and columns.
+Flexbox works better in one dimension only (either rows OR columns).
+
+Q. What is cell padding and cell spacing?
+Cellpadding specifies the space between the border of a table cell and its contents (i.e) it defines the whitespace between the cell edge and the content of the cell. Cellspacing: Cellspacing specifies the space between cells (i.e) it defines the whitespace between the edges of the adjacent cells.
+
+Q. What is font-weight and font-size?
+The font-weight property sets how thick or thin characters in text should be displayed whereas the font-size property sets the size of a font.
+
+Q. what is difference between em and rem?
+em is relative to the font-size of its direct or nearest parent whereas rem is relative to the HTML (root) font-size.
+
+Q. What is difference between relative and absolute position in css?
+An element with position: relative; is positioned relative to its normal position.
+An element with position: absolute; is positioned relative to the nearest positioned ancestor.However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+
+Bootstrap :- This is a framework developed by Twitter that contains pre-made front-end templates for web design.
+
+for css responsive design
+padding,margin --> rem
+height --> vh or %
+width --> vw or %
+border-radius --> px
+font size --> px
+use display --> flex, justify-content, align-items for responsive design
+avoid use of position --> absolute, relative
+
+Q. What is difference between sticky and fixed position in css?

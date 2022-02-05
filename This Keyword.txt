@@ -1,0 +1,58 @@
+This Keyword in Javascript
+
+It is a reserved keyword in javascript which means we can't set it as the value of any variable.
+For eg:- we can't write---> var apple = this;
+
+More importantly the value of the keyword 'this' is determined by how a function is called. We usually call 'this' the function's execution context. We can understand the value of the keyword 'this' by four rules and these are global, implicit, explicit and new.
+
+The global context.
+This rule applies when you see the keyword 'this' outside of a declared object.
+What do I mean by declared object?
+What we mean here is that there has not been an object defined which contains the keyword 'this'.
+
+This is terrible when we see the keyword 'this' in the global context. It's a value refers to the global object which in the browser is the window object. 
+for eg:- console.log(this);  ---> output: window
+
+In fact every variable that we declare in the global scope is actually attached to the window object.
+var person = "dishant";
+window.person ---> "dishant"
+
+Summary
+'this' is a reserved keyword that can be determined using one of four rules.The first rule which stated that when the keyword 'this' is not inside of a declared object its value is the global object
+
+We can make a global variable in function by using 'this' keyword. For eg:- function dog(){ this.muddy="Aryan" } 
+console.log(muddy); ---> "Aryan"
+
+The second rule for determining the value of the key word 'this' the implicit rule. The implicit rule states that when the keyword 'this' is inside of a declared
+object its value will always be the closest parent object.
+
+For eg:-
+var person={
+	firstname:"Dishant",
+	sayHi: function(){
+		return "Hi " + this.firstname;				//Here 'this' is equal to person (closest parent object)
+	}
+}
+
+
+The Third rule includes three methods Call, Apply and Bind that are used to explicitly said the value of the keyword 'this'. We use them when we want full control over what the keyword 'this' will refer to. So it will have precedence over the first two rules. Call and Apply will immediately invoke the function they are called on whereas Bind return a new function definition with the value of the keyword 'this' explicitly set.Call and Bind accept an infinite number of parameters whereas Apply only takes in two.
+
+One thing to remember is that they can only be used on functions. Call, Apply and Bind are methods that can only be used by functions not by any other data type like strings booleans or objects.
+
+For clear understanding watch video in colt steele course.
+
+The fourth rule for determining the value of the keyword 'this' is when you see the new keyword.When the new keyword is used a new object is created out of thin air. The new keyword is used with a function and inside of the function definition the keyword 'this' refers to the new object that is created.Finally when the new keyword is used, an implicit return 'this' is added to the function which uses it.
+
+for eg:- function person(firstname,lastname){
+		this.firstname= firstname			//Here value of this is window (global object)
+		this.lastname= lastname
+	}
+
+var elie = new person("dishant","aggarwal")			
+
+
+The value of the keyword this changes when we use the new keyword.The keyword 'this' now refers to an object that is created when the new keyword is used.We're storing that object in a variable called elie and can then access the first name and last name properties on it.
+
+
+Summary
+We saw four rules global, implicit, explicit and the new keyword.When the keyword 'this' is in the global context or in a function it is either the global object which is the window if in the browser or (undefined if we're using strict mode). When the keyword 'this' is inside of a declared object the value of the keyword 'this' will always be the closest parent object.When we lose the context of the keyword 'this' we can explicitly set the value using call, apply or bind.Finally when the new keyword is used the value of the keyword 'this' is set to an empty object and return from the function that is used with the new keyword.

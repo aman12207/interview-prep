@@ -1,0 +1,12 @@
+Q. Difference between strong tag and b tag?
+strong tag semantically emphasizes on the important word or section of words while the bold tag is just offset text conventionally styled in bold.
+
+Q. How can we display a website inside of another website?
+Using iframe tag. An iframe(inline frame) is used to embed another document within the current HTML document.
+
+Q. Difference between element and tag?
+Elements enclose the contents in between the tags. It generally consists of a start tag, content and an end tag.
+Tags are used to mark up the start of an HTML element and they are usually enclosed in angle brackets. An example of a tag is: <h1>. 
+
+Q. What is void element?
+A void element is an element whose content model never allows it to have contents under any circumstances. It elements can have attributes. Eg:- img, hr, br tags

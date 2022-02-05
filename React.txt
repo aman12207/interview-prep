@@ -1,0 +1,289 @@
+Q. What is React?
+React is an open-source frontend JavaScript library which is used for building user interfaces especially for single page applications. It is used for handling view layer for web and mobile apps. React was created by Jordan Walke, a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
+
+React is just a UI Library that allows us to write more javascript to have interactivity on our websites.
+
+Q. What are the major features of React?
+The major features of React are:
+a.It uses VirtualDOM instead of RealDOM considering that RealDOM manipulations are expensive.
+b.Supports server-side rendering.
+c.Follows Unidirectional data flow or data binding.
+d.Uses reusable/composable UI components to develop the view.
+
+Server-side rendering (SSR) is an application's ability to convert HTML files on the server into a fully rendered HTML page for the client. 
+
+Q. What is JSX?
+JSX stands for JavaScript XML. It allows us to write HTML in React. Basically it just provides syntactic sugar for the React.createElement() function. It looks very similar to HTML, but is converted to JavaScript behind the scenes.
+
+Q. What is Syntactic sugar?
+syntactic sugar is syntax within a programming language that is designed to make things easier to read or to express.
+
+Q. What is the difference between Element and Component?
+An Element is a plain object describing what we want to appear on the screen in terms of the DOM nodes or other components. Elements can contain other Elements in their props. Creating a React element is cheap. Once an element is created, it is never mutated.
+Whereas a component can be declared in several different ways. It can be a class with a render() method or it can be defined as a function. In either case, it takes props as an input, and returns a JSX tree as the output.
+
+Q. How to create components in React?
+There are two possible ways to create a component.
+Function Components: This is the simplest way to create a component. These are pure JavaScript functions that accept props object as first parameter and return React elements:
+Class Components: We can also use ES6 class to define a component.
+
+functions is impure if it contains any of the following :-
+Making a HTTP request
+Mutating data
+Printing to a screen or console
+DOM Query/Manipulation
+Math.random()
+Getting the current time
+
+Q. When to use a Class Component over a Function Component?
+If the component needs state or lifecycle methods then we use class component otherwise we use function component. However, from React 16.8 with the addition of Hooks, we could use state , lifecycle methods and other features that were only available in class component right in our function component.
+
+Q. What are Pure Components?
+React.PureComponent is exactly the same as React.Component except that it handles the shouldComponentUpdate() method for us. When props or state changes, PureComponent will do a shallow comparison on both props and state.If the value of the previous state or props and the new state or props is the same, the component is not re-rendered. Pure Components restricts the re-rendering ensuring the higher performance of the Component.
+
+Q. What is State?
+State is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components.
+State is similar to props, but it is private and fully controlled by the component. i.e, It is not accessible to any other component till the owner component decides to pass it.
+
+Q. What are Props?
+Props is short for properties
+Attributes on Components get converted into an object called Props
+Props make components more reusable
+Props are an object, so we can destructure them.
+They are data passed down from a parent component to a child component.
+
+Q. What are props.children?
+props.children represents the content between the tags of a Component.
+props.children can be an array or a single item.
+props.children can contain text and/or React Elements and/or React Components.
+
+Q. What is the purpose of props in react?
+1.Pass custom data to the component.
+2.Trigger state changes.
+3.Use via this.props.reactProp inside component's render() method.
+
+Q. What is the difference b/w state and props?
+Both state and props are plain javascript objects. Both of them hold information that influences the output of render, but they are different in their functionality w.r.t component. Props get passed to components similar to function parameters whereas state is managed within the component similar to variables declared within a function. 
+
+Q. Why should we not update the state directly?
+If you try to update the state directly then it won't re-render the component.
+
+Q. Why we use setState() method?
+We use setState() method to update the state. It schedules an update to a component's state object. When state changes, the component responds by re-rendering.
+
+Q. What is the purpose of callback function as an argument of setState()?
+The callback function is invoked when setState finished and the component gets rendered. Since setState() works in an asynchronous way, the callback function is used for any post action.
+
+Note: It is recommended to use lifecycle method rather than this callback function.
+
+Q. What is the difference between HTML and React event handling?
+a. In HTML, the event name usually represents in lowercase as a convention, whereas in React it follows camelCase convention.
+b. In HTML, we can return false to prevent default behavior, whereas in React we must call preventDefault() explicitly.
+c. In HTML, we need to invoke the function by appending ()parentheses, whereas in react we should not append ()parentheses with the function name.
+
+Q. What are synthetic events in React?
+SyntheticEvent is a cross-browser wrapper around the browser's native event. It's API is same as the browser's native event, including stopPropagation() and preventDefault(), except the events work identically across all browsers.
+
+Q. What is the use of refs?
+The ref is used to return a reference to the element. They should be avoided in most cases, however, they can be useful when we need a direct access to the DOM element or an instance of a component.
+
+Q. What are React hooks?
+Hooks is a new feature in React 16.8 that allows us to use state and other features of react without writing class component.
+
+Q. what are the uses of react hooks?
+1. Hooks allow us to reuse stateful logic without changing your component hierarchy
+2. Hooks let us split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data)
+3. Hooks let us use more of React’s features without classes
+
+Virtual Dom :- It is a representation of a user interface that is kept in memory and is synced with the "real" DOM
+
+Reconciliation :- It is the process of deciding whether an update is necessary or not.
+
+Q. What are the limitations of React?
+Limitations of React are listed below:
+React is just a library, not a full-blown framework
+Its library is very large and takes time to understand
+It can be little difficult for the novice programmers to understand
+Coding gets complex as it uses inline templating and JSX
+
+What is Babel & webpack?
+Babel is a tool that compiles all of your Javascript into an older version (ES5) that all browsers support.
+Webpack:-It is a module bundler it's letting us write a modular code.It takes all our javascript files and create well bundle everything up together and optimize it for production.
+
+What are Asynchronous function & Synchronous function?
+Asynchronous functions are those functions in which we don't know when these functions will complete and there is nest a bunch of other function calls inside of each other because each one depends on the result and the return of the previous one.
+
+Synchronous action is something that we can expect to happen almost immediately.It's something that pretty much happens and JavaScript knows the amount of time it'll take so javascript will wait for that thing to finish before it continues.Running the rest of the code afterwards. An asynchronous action or event is something that actually takes an indefinite amount of time that JavaScript does not know.So what it does is it actually runs the rest of the code after and then when the asynchronous event finishes it then runs that finished event.
+
+Setstate is an Asynchronous function.
+
+What is super in react class?
+super calls the constructor method on the component class.
+
+What are Lifecycle Methods?
+lifecycle methods are essentially methods that get called automatically by react at different stages when the component gets rendered.
+
+Why do we break things down into components in React?
+By breaking things down we're making things more flexible because each component does one thing.So that it can be used in other places, the bigger a file gets the more J.S.X it has the more logic and it gets harder to be used in another place.And this idea of breaking things down into small individual chunks is really really important. And most good react projects break things down into a pretty small component file that the name pretty much tells it exactly what it does,just one small thing
+
+What is HOC?
+Higher Order Component is just a function that takes another component as an argument, transforms it into another component and returns that transformed component out of itself. Eg:- connect, withrouter
+withRouter will pass updated match, location, and history props to the wrapped component whenever it renders.
+
+Define Component.
+A React Component is a function that returns one React Element which describes how a section of the User Interface should look like.React Components promote code reuse and are easier to debug.
+
+Components defined with a function are called function components.
+Components are like JavaScript functions. They accept arbitrary inputs (called "props") and return React elements describing what should appear on the screen.
+Component's props should never be modified inside the function.
+
+What do you mean by mounting?
+Mounting is essentially when react puts our component on the page.
+
+What is componentDidMount?
+It is a lifecycle method.It is invoked immediately after a component is mounted & it reads and calls whatever block of code we write inside it.
+
+DOM:- The Document Object Model is like an API for interacting with our html.
+It's what the browser uses to display a web site or a web app and javascript is simply manipulating this dom.
+React operates a Virtual DOM.A virtual DOM is a representation of the UI which is kept in memory and synced with the DOM.
+
+react build:- turn all of the react code in source folder into that version that the browser understands and put it inside of the public folder
+
+react eject:- it will actually take out all of the configuration files that it's hidden from us for Bable and Webpack in case we wanted to manage it ourselves now.
+
+What are svg icons?
+SVG icons are essentially scalable vector graphics which are really small really performant.But look the same no matter how large or how small that image is expanded.
+
+What is Redux?
+Redux is a library that makes state management easier not only for react but for any tools.It actually got inspiration from database design from things such as events sourcing or CQRS.
+
+CQRS stands for Command and Query Responsibility Segregation, a pattern that separates read and update operations for a data store.
+
+redux:- to store state.It allows react state to be more scalable.
+react router:- to move b/w pages
+stripe:- to make online purchases
+redux saga:- a scalable way for us to handle asynchronous actions in app
+
+JSX is being converted into a React.createElement(...) that returns an object.So <h1 className="title">Supermarket</h1> as being an object that more or less looks like this
+{
+  type: 'h1',
+  props: {
+    className: "title",
+    children: "Supermarket"
+  }
+}
+A JSX element is an object.
+
+You can only return 1 element in JSX.Wrap multiple elements with React.Fragment .The short syntax is <> that can be closed with </>.The original syntax is: <React.Fragment> and </React.Fragment>
+
+The following JSX code:
+<GreetUser user="Sam" id="2" />
+
+gets transformed into:
+
+React.createElement(GreetUser, {user: "Sam", id: "2"});
+
+What is firebase?
+Firebase is generally a solution or a platform that handled a lot of the stuff that a backend developer would normally do including efficiently querying database, efficiently storing our stuff and it gives us a very easy way to do o authentication which normally to do from scratch is extremely difficult.
+
+The provider is this component class that we get from react-redux that once passed the store object. We'll be able to give that redux store context to the rest of the application so we can dispatch actions to that store or we can actually pull values off of the store and add into our components.
+
+Connect is a higher order component that lets us modify our component to have access to things related to redux like mapStateToProps and mapDispatchToProps.
+
+MapStateToProps= mapStateToProps() is a utility which helps our component get updated state (which is updated by some other components).
+
+Now this mapstatestoprops and the connect use anywhere we need properties from our reducers.
+
+MapDispatchToProps :- mapDispatchToProps() is a utility which will help our component to fire an action event (dispatching action which may cause change of application state)
+
+Utility functions allow us to keep our files clean and organize functions that we may need in multiple files in one location.
+
+What is diff b/w == and === in javascript?
+So there's two types of equivalence in JavaScript.There's the double equals and then there's the triple equals. Double equals just checks if the values of the two things are the same and what it will also do is it will try and coerce the types on the left and the right side that we're comparing.So let's say for example the string of one and the number of one they'll try and coerce the value of the string over to a number and then they'll compare the values.So once the string of 1 becomes 1 while the values of one are the same. Whereas if we try and do a triple equals we'll find that it gives us false because with the triple equals that's a strict evaluation which is looking at both the type of what we're comparing and also the value.So because the type of our string of one is a string and then our type of our number is a number then we'll get false when we try and do it this way now inside of JavaScript.
+
+Reselect allows us to write selectors in such a way so that it knows that if the properties that it's pulling from the state and using are the same in the sense that their value hasn't changed and the output of the selector is not different then it won't actually pass them into our component it'll just pass the old value and our react component will know not to re render.There's also other benefits in the sense that it allows us to actually separate our selectors and make them reusable.
+
+Thunk is a new library that allows us to handle asynchronous event handling and firing multiple actions.
+All Thunks is a action creator that returns a function that gets the dispatch, very similar to the map dispatch to props.
+
+What is App function?
+The App function referred to as a react component.It is a react component because it is a plain JavaScript function that returns some JSX.Components in react have two jobs.First of all, they produce J.S. X, which tells react what we want to show on the screen to the user and second components also handle user events.
+
+Redux Cycle :-
+Action Center --> Action --> Dispatch --> Reducer --> State
+
+Action Creator :- Action creator is a function that is going to create or return a plain javascript object, we refer to this plain javascript object as an action. 
+
+Action :- An action has a type property and a payload property, that type property in action describes some change that we want to make inside of our data. And the payload property describes some contexts about the change that we want to make.
+The purpose of an action is to describe some change that we want to make to the data inside of our application.
+
+Dispatch :- The dispatch function is going to take in action. It's going to make copies of that object and then pass it off to a bunch of different places inside of our application.
+
+Reducer :- A reducer is a function that is responsible for taking in an action and some existing amount of data, its going to process that action and then make some change to the data and then return it so that it can be centralized in some other location.
+Reducers going to take an action, look at the action, look at its type and then based on that type decide how to update its data. 
+
+State :- In redux the state property is a central repository of all information that has been created by our reducers. All the information gets consolidated inside the state object so that our react application can very easily reach in to our the redux side of the app and get access to all of the data of our application.
+
+And in that way our react app doesn't have to go around to each separate reducer for the the current state.
+
+Any time we want to change the state or the data of our application we're going to call an action creator. Calling an action creator is going to produce an action object. This action object describes exactly how we want to change data inside of application. That action object gets fed to the dispatch function which in turn is going to make copies. We can imagine of the action object and feed those copies to each of our different reducers. In turn the reducers are going to run.They're going to process those actions that came in, modify their data and then eventually return some new data. That data that gets returned gets formed into some new state object.So then we wait until we need to somehow updates our state again at some point in the future.
+
+What is Middleware?
+A middleware is a plain javascript function that is going to be called with every single action that we dispatch. 
+Inside of that function a middleware has the opportunity to stop an action from being dispatch, so prevent it from going to any of our reducers. Middleware can modify an action or it can otherwise just kind of mess around in with an action.For example a middleware simply console log every action that we dispatch.So any time we dispatch an action we might have a middleware that is going to simply console log it.
+There are a tremendous number of open source middleware that we can install as dependencies into our project.
+We can very easily write our own custom middleware and use them inside of our own redux store.
+One of the most popular uses of middleware is for dealing with asynchronous action creators.
+
+What is a Portal?
+A portal allows us to render some element not as a direct child.We can instead render that element or that component as a child of some other element inside our HTML structure, most commonly the body.
+
+Why we use Portal? 
+We use Portal to overcome rules of stacking contexts or trying to show a modal or any CSS related issues.
+
+Disadvantage of React Hooks
+1.Inelegant naming rule :- React requires us to start with use when naming Hooks. In some cases, it will lead to strange naming, such as useAddToCart, useFetchPosts, which does not conform to the rules of grammar and reads strangely.
+
+2.Restrictions on hook calling order :- Only Call Hooks at the Top Level. Don’t call Hooks inside loops, conditions, or nested functions.
+
+3.Confusing useEffect :- useEffect, literally means that it will be executed when an effect occurs. At the same time, it can depend on some states and be triggered after these state changes. It seems that we can use useEffect as a state watcher. But here we find another mechanism for it: it will be triggered once when the component is mounted.Changes of states and component lifecycles should be two different things, but useEffect combines these two concepts together. This design is also prone to confusion.
+
+react router dom provides us three arguments/properties on any component that gets rendered by route.
+The three props are :-
+history prop :- push(function)
+location prop :- pathname(string) :- gives full path name
+match prop :- isExact(boolean), params(object), path(string), url(string)
+
+use of history->push
+<button onClick={()=>props.history.push('/topics')}> Topics </button>
+
+This is equivalent to using a link but it gives us more dynamic access. We can dynamically functionally control when we want this to work. We couldn't render a link in our componentDidMount because it's just a functional call, therefore we use history.push prop
+
+useMemo :- Memo here stands for Memoization which is essentially the idea of caching the value so that we don't have to recompute it every single time we render our component.
+Why dont we useMemo every time, why dont we memoize every thing?
+Because it gives us some performance overheads & memory overheads i.e. we calling an additional function and also it saving previous value in memory variable so we forcing our memory to get larger every time we use useMemo.
+When we use useMemo?
+1.when we want to make a slow funciton, we wrap it in useMemo so that it doesn't recompute every single time we render our component, only computes when we actually need the value from that function since the input is actually changed.
+2.In the idea of reference equality, whenever we make sure the reference of an object or an array is exactly the same as it was the last time we render if none of the internal working is changed then we will use useMemo to make sure it only updates the reference of that object whenever the actual content of the object changed instead of updating every single time we render.
+
+Q. Difference between authentication and authorization?
+authentication is the process of verifying who someone is, whereas authorization is the process of verifying what specific applications, files, and data a user has access to.
+
+Q. Difference between Controlled and Uncontrolled components?
+Controlled components :- The component that controlls the input elements within the form on subsequent user input is called controlled component i.e. Every state mutation will have an associated handler function.
+Uncontrolled components are the ones that store their own state internally and we query the DOM using ref to find the current value when we need it. This is bit more like traditional HTML.
+
+Q. How to prevent re-renders on React or how can we stop a component to re-render?
+If we’re using a React class component we can use the shouldComponentUpdate method or a React.PureComponent class extension to prevent a component from re-rendering. 
+And if we're using functional component then we can use React.memo() to prevent re-rendering.
+
+Q. What is the main difference between localStorage and sessionStorage?
+LocalStorage is the same as SessionStorage but it persists the data even when the browser is closed and reopened(i.e it has no expiration time) whereas in sessionStorage data gets cleared when the page session ends.
+
+What are Frameworks?
+Angular is a framework.
+
+What are Libraries?
+
+What is the difference b/w frameworks and libraries?
+When an user use a framework, the framework is in charge of the flow. Framework is calling the code whereas When user uses a library, user is in charge of the application. User is calling the code
